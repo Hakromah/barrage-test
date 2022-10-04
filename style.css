@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: grid;
+    grid-template-columns: 0.3fr 0.2fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    height: 100vh;
+    border: 1px solid red;
+}
+.right-col {
+    display: flex;
+    background-color: gray;
+    grid-column: 7/8;
+    grid-row: 1/9;
+    justify-items: space-between;
+
+}
+.rect {
+    background-color: blue;
+    width: 10rem;
+    height: 1.5rem;
+    align-items: center;
+    margin-left: 3rem;
+    margin-top: 9px;
+
+    
+}
+.circle {
+    background-color: rgb(79, 72, 72);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin-right: 1rem;
+    margin-bottom: 4px;
+    
+}
+.top-row {
+    display: flex;
+    background-color: aqua;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column: 1/7;
+    justify-content: flex-start;
+}
+.dh-top {
+    background-color: rgb(168, 155, 155);
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding-top: 5px;
+}
+.midle {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(167, 155, 155);
+    align-items: center;
+    gap: 20px;
+    grid-column: 2/6;
+    grid-row: 4/7;
+    justify-content: center;
+
+}
+.search {
+    background-color: #fff;
+    text-align: center;
+    width: 10rem;
+    height: 1.5rem;
+
+    
+}
+.submit {
+    background-color: darkblue;
+    text-align: center;
+    color: #fff;
+    width: 5rem;
+    height: 1rem;
+}
+
+
+/* Media query for mobile*/
+@media (max-width:480px) {
+    .right-col {
+        display: none;
+    
+    }
+    .top-row {
+        display: flex;
+        background-color: aqua;
+        justify-content: flex-end;
+        align-items: center;
+        grid-column: 1/8;
+        justify-content: flex-end;
+        
+    }
+    .midle {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(167, 155, 155);
+        align-items: center;
+        gap: 20px;
+        grid-column: 1/8;
+        grid-row: 2/4;
+        justify-content: center;
+    
+    }
+}
